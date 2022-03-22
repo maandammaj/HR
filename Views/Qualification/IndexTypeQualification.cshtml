@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewData["Title"] = "IndexTypeQualification";
+}
+
+<h1>IndexTypeQualification</h1>
+<h1>@ViewData["Title"]</h1>
+
+@*//////////////////////////// أنواع المؤهلات العلمية li  ///////////////////////////////////////////////*@
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+    <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+        <a class="nav-link" data-bs-toggle="collapse" id="IdIndexTypeQualification" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+            <span class="menu-icon">
+                <i class="mdi mdi-view-list"></i>
+            </span>
+            <span class="menu-title font-weight-normal">أنواع المؤهلات العلمية </span>
+
+        </a>
+
+    </li>
+</div>
+
+@*//////////////////////////// أنواع المؤهلات العلمية عرض الجدول ///////////////////////////////////////////////*@
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="card" style="background-color:white">
+        <div class="card-body">
+
+
+
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th> نوع المؤهل العلمي</th>
+
+
+                        <th style=" text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr>
+                        <td>تسلسل</td>
+                        <th> نوع المؤهل العلمي</th>
+
+
+
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</section>
+
+@*/////////////////////////////////////////modyl أنواع المؤهلات العلمية//////////////////////////////////*@
+<div class="modal" id="myModalIndexTypeQualification">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header Sectors -->
+            <div class="modal-header">
+                <h4 class="modal-title">أنواع المؤهلات العلمية</h4>
+                <button type="button" class="close btnclose">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <input id="textsectors" class="form-control" type="text" placeholder="اسم المؤهل" />
+                </div>
+
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+
+            $("#IdIndexTypeQualification").click(function () {
+
+                $("#myModalIndexTypeQualification").modal('show');
+            });
+
+            $(".btnclose").click(function () {
+
+                $("#myModalIndexTypeQualification").modal('hide');
+            });
+            $("#btnSave").click(function () {
+                alert("nssssssss");
+                var newcategory = $("#txtNewCategory").val();
+                if (newcategory != "") {
+                    $.ajax({
+                        url: "/Home/AddCategory",
+                        method: "Post",
+                        data: { newcategory: newcategory },
+                        success: function (response) {
+                            var gitresp = $("#ddlcategoryy");
+                            var gitresp = $("#ddlcategory");
+                            gitresp.empty().append('<option selected="selected" value="0">--select category--</option>');
+                            $.each(response, function () {
+                                gitresp.append($("<option></option>").val(this['value']).html(this['text']));
+                            });
+                            gitresp.append('<option value="new">--add new category--</option>');
+
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
+
+
+

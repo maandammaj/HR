@@ -1,0 +1,713 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<div style="list-style:none;">
+    <div class="table-responsive  col-md-6 " style="margin-bottom: 66px;width: 100%;background: white;list-style: none;padding: 10px;text-align: center;">
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexTypeQualification" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);      width: 206px; border-radius: 10px;  color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع المؤهلات العلمية </span>
+
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexSpecialties" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 206px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع التخصصات </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexSubSpecialties" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 206px; border-radius: 10px; color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">التخصصات الفرعية  </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IDIndexSubQualification" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 206px; border-radius: 10px;color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal"> الدرجات العلمية </span>
+
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdEstimates" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 206px; border-radius: 10px; color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal"> التقديرات </span>
+
+            </a>
+
+        </li>
+    </div>
+
+
+    @*/////////////////////////////////////////////////////////////////////////////////////////////*@
+    @*//////////////////////////// أنواع المؤهلات العلمية li  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexTypeQualification" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع المؤهلات العلمية </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// أنواع المؤهلات العلمية عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> نوع المؤهل العلمي</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <th> نوع المؤهل العلمي</th>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*/////////////////////////////////////////modyl أنواع المؤهلات العلمية//////////////////////////////////*@
+    <div class="modal" id="myModalIndexTypeQualification">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">أنواع المؤهلات العلمية</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم المؤهل" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+
+    @*////////////////////////////li الجدول التخصص///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexSpecialties" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع التخصصات </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+    </div>
+    @*////////////////////////////عرض الجدول التخصص///////////////////////////////////////////////*@
+
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> التخصص</th>
+                            <th> نوع المؤهل العلمي</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <td>التخصص</td>
+                            <td>نوع المؤهل العلمي</td>
+
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+    @*////////////////////////////////////////////MODYLE التخصص///////////////////////////////////////////////////*@
+    <div class="modal" id="myModaIndexSpecialties">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">   التخصصات </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم التخصص" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار نوع المؤهل--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*///////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+
+    @*//////////////////////////// عرض li التخصص الفرعي   ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 30%;
+        margin-right: 48px;
+        float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIndexSubSpecialties" aria-expanded="true" aria-controls="sidlayout" style=" background: linear-gradient(to left,#878a9f,#00edff);
+        width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">التخصصات الفرعية  </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// عرض الجدول التخصص الفرعي   ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> التخصص الفرعي</th>
+
+
+                            <th style=" text-align: center; ">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <td>اسم الموقع القضائي</td>
+                            <td>اسم الموقع القضائي</td>
+                            <td>اسم الموقع القضائي</td>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="
+    text-align: center;
+">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    @*////////////////////////////  Modyle عرض التخصص الفرعي   ///////////////////////////////////////////////*@
+    <div class="modal" id="myModalIndexSubSpecialties">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">  التخصصات الفرعية </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم التخصص" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار التخصص--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*///////////////////////////////////////////////////////*@
+
+
+    @*///////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+
+
+
+    @*////////////////////////////عرض الجدول الدرجات العلمية  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IDIndexSubQualification" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal"> الدرجات العلمية </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*////////////////////////////عرض الجدول الدرجات العلمية  ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th>اسم الدرجة العلمية  </th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <td>اسم الدرجة العلمية</td>
+
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="   text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*////////////////////////////عرض modyel الدرجات العلمية  ///////////////////////////////////////////////*@
+    <div class="modal" id="myModalIndexSubQualification">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">الدرجات  العلمية</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم الدرجة" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+    @*////////////////////////////عرض li التقديرات  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdEstimates" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal"> التقديرات </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*////////////////////////////عرض الجدول التقديرات  ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> اسم التقدير</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <td>اسم التقدير</td>
+
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="  text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+    @*////////////////////////////عرض modyl التقديرات  ///////////////////////////////////////////////*@
+    <div class="modal" id="myModalIndexEstimates">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">التقديرات</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم المؤهل" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*///////////////////////////////////////////////////////////////////////////////////////////////////////////*@
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">أنواع المؤهلات العلمية</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم المؤهل" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*////////////////////////////////////////////ظظظظظظظظظظظظظظ///////////*@
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">  أنواع التخصصات </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم التخصص" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار نوع المؤهل--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*///////////////////////////////////////////////////////////////////////////*@
+    <div class="modal" id="myModal3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">  التخصصات الفرعية </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم التخصصات الفرعي" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار التخصص--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+        <script>
+            $(document).ready(function () {
+
+
+                $("#IdIndexTypeQualification").click(function () {
+
+                    $("#myModalIndexTypeQualification").modal('show');
+                });
+
+                $("#IdIndexSpecialties").click(function () {
+
+                    $("#myModaIndexSpecialties").modal('show');
+                });
+                $("#IdIndexSubSpecialties").click(function () {
+
+                    $("#myModalIndexSubSpecialties").modal('show');
+                });
+                $("#IDIndexSubQualification").click(function () {
+
+                    $("#myModalIndexSubQualification").modal('show');
+                });
+                $("#IdEstimates").click(function () {
+
+                    $("#myModalIndexEstimates").modal('show');
+                });
+
+
+                $(".btnclose").click(function () {
+                    $("#myModalIndexTypeQualification").modal('hide');
+                    $("#myModaIndexSpecialties").modal('hide');
+                    $("#myModalIndexSubSpecialties").modal('hide');
+                    $("#myModalIndexEstimates").modal('hide');
+                    $("#myModalIndexSubQualification").modal('hide');
+                });
+                $("#btnSave").click(function () {
+                    alert("nssssssss");
+                    var newcategory = $("#txtNewCategory").val();
+                    if (newcategory != "") {
+                        $.ajax({
+                            url: "/Home/AddCategory",
+                            method: "Post",
+                            data: { newcategory: newcategory },
+                            success: function (response) {
+                                var gitresp = $("#ddlcategoryy");
+                                var gitresp = $("#ddlcategory");
+                                gitresp.empty().append('<option selected="selected" value="0">--select category--</option>');
+                                $.each(response, function () {
+                                    gitresp.append($("<option></option>").val(this['value']).html(this['text']));
+                                });
+                                gitresp.append('<option value="new">--add new category--</option>');
+
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    }
+

@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="~/assets/css/bootstrap.css">
+    <script defer src="~/assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="~/assets/vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="~/assets/css/app.css">
+    <style type="text/css">
+        .notif:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        .text-success {
+            color: #00cfdd !important;
+        }
+    </style>
+</head>
+<body class="ql-direction-rtl">
+    <div id="app">
+        <div id="sidebar" class='active text-white'>
+            <div class="sidebar-wrapper active  ">
+                <div class="sidebar-header" style="height: 50px;margin-top: -30px ; ">
+                    <i class="fa fa-users text-success me-4"></i>
+                    <span>U.S</span>
+                </div>
+                <div class="sidebar-menu text-white text-bold">
+                    <ul class="menu">
+                        <li class="sidebar-item active ">
+                            <a asp-controller="Home" asp-action="index" class='sidebar-link'>
+                                <i class="fa fa-home text-success"></i>
+                                <span>لوحة المراجعة</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a class='sidebar-link'>
+                                <i class="fa fa-building text-success"></i>
+                                <span>	الجهات والمواقع القضائية </span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a asp-controller="Home" asp-action="ADMINSECTOR">	الكل </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ASMF" asp-action="indexSectors">	الجهات القضائية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ASMF" asp-action="indexManagemt">الموقع القضائية الاساسية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ASMF" asp-action="indexManagemtFRAY">	الموقع ا لقاضية الفرعية </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a class='sidebar-link'>
+                                <i class="fa fa-table text-success"></i>
+                                <span>المؤهلات والتخصصات</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a asp-controller="Home" asp-action="Privacy">	الكل </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Qualification" asp-action="IndexTypeQualification">	أنواع المؤهلات العلمية  </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Qualification" asp-action="IndexSpecialties">	أنواع التخصصات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Qualification" asp-action="IndexSubSpecialties">	التخصصات الفرعية  </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Qualification" asp-action="IndexSubQualification">	درجة المؤهلات العلمية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Qualification" asp-action="IndexEstimates">		التقديرات </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users text-success"></i>
+                                <span>	تراميز وظيفية1  </span>
+                            </a>
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a asp-controller="Home" asp-action="IndexConfigurationone">الكل</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexJOBTYPE">نوع الوظيفة </a>
+                                </li>
+                                @*<li>
+                    <a asp-controller="Configurationone" asp-action="manage">المجموعة الوظيفية</a>
+                </li>*@
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexJOBLEVEL">	الدرجات الوظيفة</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexJOBCATEGORY">الفئات الوظيفة</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexJOBRANK"> المرتبة الوظيفية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexPOSITIONS"> المناصب </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="manage">	أنواع المناصب </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IdexEMPLOYEECASES">	حالة الموظف </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users text-success"></i>
+                                <span>	تراميز وظيفية 2 </span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a asp-controller="Home" asp-action="IndexConfigurationTwo">الكل</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexDECISIONTYPE">نوع القرار:</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexDECISIONNATURAL">طبيعة القرار</a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexCARDSTYPE">أنواع الوثيقة الشخصية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexCOUNTRIES">الدولة</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexCITIES">المحافضات</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexDIRECTORATES">المديريات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexHOLIDAYS">أنوع الإجازات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexLANGUAGES">اللغات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationTwo" asp-action="IdexOVERTIMESTYPES">نوع الوقت الاضافي</a>
+                                </li>
+
+
+
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users text-success"></i>
+                                <span>اخرى 	تراميز وظيفية  </span>
+                            </a>
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a asp-controller="Home" asp-action="IndexConfigurationOthers">الكل</a>
+                                </li>
+                           
+                                <li>
+                                    <a asp-controller="ConfigurationOthers" asp-action="IndexDUES">	الاستحقاقات</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationOthers" asp-action="IndexDISCIPLINE">الاستقطاعات</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationOthers" asp-action="IndexALLOWANCE"> البدلات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="ConfigurationOthers" asp-action="IndexSCREENS"> الشاشات </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Configurationone" asp-action="IndexABSENCES">	أنواع المناصب </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users text-success"></i>
+                                <span>المستخدمين  </span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a asp-controller="Home" asp-action="AdminAddemployee">البيانات الشخصية الموظف </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Pagess" asp-action="IndexCOURSES">إضافة مستخدم </a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="Pagess" asp-action="IndeREWARDS">إضافة مستخدم </a>
+
+                                </li>
+                                <li>
+
+                                    <a asp-controller="Pagess" asp-action="IndexFunctionalMovement">إضافة مستخدم </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Employee" asp-action="manage">إضافةالواجهات</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Employee" asp-action="manage">تحديد الصلاحيات</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-user text-success"></i>
+                                <span>تقارير</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a href="add_user.html">خلاصة الموظف</a>
+                                </li>
+                                <li>
+                                    <a href="manage_user.html">ادارة الموظف</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="reports.html" class='sidebar-link'>
+                                <i class="fa fa-chart-bar text-success"></i>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
+                        <li class="dropdown nav-icon">
+                            <a href="#" data-bs-toggle="dropdown"
+                               class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="d-lg-inline-block">
+                                    <i data-feather="bell"></i><span class="badge bg-info">2</span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large">
+                                <h6 class='py-2 px-4'>Notifications</h6>
+                                <ul class="list-group rounded-none">
+                                    <li class="list-group-item border-0 align-items-start">
+                                        <div class="row mb-2">
+                                            <div class="col-md-12 notif">
+                                                <a href="leave_details.html">
+                                                    <h6 class='text-bold'>John Doe</h6>
+                                                    <p class='text-xs'>
+                                                        applied for leave at 05-21-2021
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-12 notif">
+                                                <a href="leave_details.html">
+                                                    <h6 class='text-bold'>Jane Doe</h6>
+                                                    <p class='text-xs'>
+                                                        applied for leave at 05-21-2021
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-bs-toggle="dropdown"
+                               class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="avatar me-1">
+                                    <img src="assets/images/admin.png" alt="" srcset="">
+                                </div>
+                                <div class="d-none d-md-block d-lg-inline-block">Hi, Admin</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.html"><i data-feather="log-out"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="main">
+
+                @RenderBody();
+            </div>
+        </div>
+
+    </div>
+    <script src="~/assets/js/feather-icons/feather.min.js"></script>
+    <script src="~/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+
+    <script src="~/assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="~/assets/js/vendors.js"></script>
+
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/dashboard.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

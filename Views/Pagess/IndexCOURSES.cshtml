@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewData["Title"] = "IndexCOURSES";
+}
+
+<h1>IndexCOURSES</h1>
+@*///////////////////////////////////////////////// الدورات التدريبية  /////////////////////////////////////////////////*@
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+    <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+        <a class="nav-link" data-bs-toggle="collapse" id="IDCOURSES" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+            <span class="menu-icon">
+                <i class="mdi mdi-view-list"></i>
+            </span>
+            <span class="menu-title font-weight-normal">الدورات التدريبية  </span>
+
+        </a>
+
+    </li>
+</div>
+
+
+@*/////////////////////////////////////////////////جدول الدورات التدريبية  /////////////////////////////////////////////////*@
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="card" style="background-color:white">
+        <div class="card-body">
+
+
+
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th>اسم الدورة</th>
+                        <th> مدة الدورة</th>
+                        <th> تاريخ الحصول عليها </th>
+
+                        <th>الجهة</th>
+
+                        <th style="text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr>
+                        <td>1</td>
+
+                        <td> ASP</td>
+                        <td> شهرين</td>
+                        <td> 2022-3-22 </td>
+                        <td>كلية الحاسوب</td>
+
+
+
+
+
+
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style=" text-align: center;">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+@*/////////////////////////////////////////////////Modal الدورات التدريبية  /////////////////////////////////////////////////*@
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModalCOURSES" style="text-align:center">
+    <div class="modal-dialog modal-lg" style=" max-width: 1290px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">الدورات التدريبية</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">اسم الدورة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">مدة الدورة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 col-12">
+                                                    <label for="first-name-icon">تاريخ الحصول عليها</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">الجهة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-12">
+                                                    <label for="first-name-icon">ملاحظات</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">حفظ</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                @* <button type="button" class="btn btn-success">Submit</button>*@
+                <button type="button" class="btn btn-light" id="btnclose">اغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*/////////////////////////////////////////////////Modal الدورات التدريبية  /////////////////////////////////////////////////*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+
+            $("#IDCOURSES").click(function () {
+
+                $("#myModalCOURSES").modal('show');
+            });
+            $("#btnclose").click(function () {
+
+                $("#myModalCOURSES").modal('hide');
+            });
+        });
+    </script>
+}
+
+
+

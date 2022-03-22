@@ -1,0 +1,258 @@
+﻿
+@{
+    ViewData["Title"] = "IndexFunctionalMovement";
+}
+
+<h1>IndexFunctionalMovement</h1>
+
+@*///////////////////////////////////////////////// المؤهلات العلمية  /////////////////////////////////////////////////*@
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+    <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+        <a class="nav-link" data-bs-toggle="collapse" id="IDFunctionalMovement" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+            <span class="menu-icon">
+                <i class="mdi mdi-view-list"></i>
+            </span>
+            <span class="menu-title font-weight-normal">المؤهلات العلمية  </span>
+
+        </a>
+
+    </li>
+</div>
+
+
+@*/////////////////////////////////////////////////جدول المؤهلات العلمية  /////////////////////////////////////////////////*@
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="card" style="background-color:white">
+        <div class="card-body">
+
+
+
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th>نوع المؤهل</th>
+                        <th>نوع التخصص</th>
+                        <th>نوع التخصص الفرعي </th>
+                        <th>اسم المؤهل</th>
+                        <th> مدة المؤهل</th>
+                        <th> تاريخ الحصول عليها </th>
+                        <th>الجهة</th>
+                        <th>المعدل</th>
+                        <th>درجة المؤهل</th>
+                        <th>التقدير</th>
+                        <th>ملاحظات</th>
+
+                        <th style="text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr>
+                        <td>1</td>
+                        <td>جامعي</td>
+                        <td>علوم</td>
+                        <td>علوم  حاسوب</td>
+                        <td> بكالوريوس علوم حاسوب</td>
+                        <td> 4 سنين</td>
+                        <td> 2022-3-22 </td>
+                        <td>كلية الحاسوب</td>
+                        <td>10000</td>
+                        <td>ممتاز</td>
+                        <td>مابيمييممييمميممتاز</td>
+
+
+
+
+
+
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style=" text-align: center;">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+@*/////////////////////////////////////////////////Modal المؤهلات العلمية  /////////////////////////////////////////////////*@
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModalFunctionalMovement" style="text-align:center">
+    <div class="modal-dialog modal-lg" style=" max-width: 1290px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">المؤهلات العلمية</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">نوع المؤهل</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>جامعي</option>
+                                                                    <option>ثنوي</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">نوع التخصص</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>علوم</option>
+                                                                    <option>علمي</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-groupt">
+                                                        <label for="first-name-icon"> نوع التخصص الفرعي  </label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>علوم حاسوب </option>
+                                                                    <option>لابوجد</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">اسم المؤهل</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">مدة المؤهل</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">تاريخ الحصول عليها</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">الجهة</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">درجة المؤهل</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>بكالوريوس</option>
+                                                                    <option>ماجيستير</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">التقدير</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>جيد</option>
+                                                                    <option>ممتاز</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label>المعدل</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <label for="first-name-icon">ملاحظات</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">حفظ</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                @* <button type="button" class="btn btn-success">Submit</button>*@
+                <button type="button" class="btn btn-light" id="btnclose">اغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*/////////////////////////////////////////////////Modal المؤهلات العلمية  /////////////////////////////////////////////////*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+
+            $("#IDFunctionalMovement").click(function () {
+
+                $("#myModalFunctionalMovement").modal('show');
+            });
+            $("#btnclose").click(function () {
+
+                $("#myModalFunctionalMovement").modal('hide');
+            });
+        });
+    </script>
+}
+

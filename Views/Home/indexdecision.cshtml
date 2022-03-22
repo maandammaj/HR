@@ -1,0 +1,244 @@
+﻿
+
+@{
+    ViewData["Title"] = "indexdecision";
+}
+
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+    <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+        <a class="nav-link" data-bs-toggle="collapse" id="Employeeli" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+            <span class="menu-icon">
+                <i class="mdi mdi-view-list"></i>
+            </span>
+            <span class="menu-title font-weight-normal">البيانات الشخصية  </span>
+
+        </a>
+
+    </li>
+</div>
+@*/////////////////////////////////////////////////////////////////////////////*@
+
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="card" style="background-color:white">
+        <div class="card-body">
+
+
+
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th> الاسم الثلاثي</th>
+                        <th> اللقب</th>
+                        <th> اسم الام </th>
+                        <th> البريد الالبكتروني</th>
+                        <th>العمر</th>
+                        <th> الرقم الوظيفي</th>
+                        <th>رقم البطاقة الشخصية</th>
+                        <th>مكان الاصدار</th>
+                        <th>تاريخ الاصدار</th>
+                        <th>رقم بطاقة الميلاد</th>
+                        <th>مكان الاصدار</th>
+                        <th style="
+    text-align: center;
+    style=" width:="">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr>
+                        <td>تسلسل</td>
+
+                        <td> الاسم الثلاثي</td>
+                        <td> اللقب</td>
+                        <td> اسم الام </td>
+                        <td> البريد الالبكتروني</td>
+                        <td>العمر</td>
+                        <td> الرقم الوظيفي</td>
+                        <td>رقم البطاقة الشخصية</td>
+                        <td>مكان الاصدار</td>
+                        <td>تاريخ الاصدار</td>
+                        <td>رقم بطاقة الميلاد</td>
+                        <td>مكان الاصدار</td>
+
+
+
+
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="
+    text-align: center;
+">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</section>
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModal3">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">البيانات الشخصية</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header" data-background-color="purple">
+                                        <h4 class="title">Edit Profile</h4>
+                                        <p class="category">Complete your profile</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Company (disabled)</label>
+                                                        <input type="text" class="form-control" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Username</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Email address</label>
+                                                        <input type="email" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Fist Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Last Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Adress</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">City</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Country</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Postal Code</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>About Me</label>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                                            <textarea class="form-control" rows="5"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#pablo">
+                                            <img class="img" src="../assets/img/faces/marc.jpg" />
+                                        </a>
+                                    </div>
+
+                                    <div class="content">
+                                        <h6 class="category text-gray">CEO / Co-Founder</h6>
+                                        <h4 class="card-title">Alec Thompson</h4>
+                                        <p class="card-content">
+                                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                                        </p>
+                                        <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-light" id="btnclose">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+
+            $("#Employeeli").click(function () {
+
+                $("#myModal3").modal('show');
+            });
+            $("#btnclose").click(function () {
+
+                $("#myModal3").modal('hide');
+            });
+        });
+    </script>
+}
+

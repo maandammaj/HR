@@ -1,0 +1,318 @@
+﻿
+@{
+    ViewData["Title"] = "AdminAddemployee";
+}
+
+
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+    <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+        <a class="nav-link" data-bs-toggle="collapse" id="Employeeli" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+            <span class="menu-icon">
+                <i class="mdi mdi-view-list"></i>
+            </span>
+            <span class="menu-title font-weight-normal">البيانات الشخصية  </span>
+
+        </a>
+
+    </li>
+</div>
+@*/////////////////////////////////////////////////////////////////////////////*@
+
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="card" style="background-color:white">
+        <div class="card-body">
+
+
+
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th> الاسم الثلاثي</th>
+                        <th> اللقب</th>
+                        <th> اسم الام </th>
+                        <th> البريد الالبكتروني</th>
+                        <th>العمر</th>
+                        <th> الرقم الوظيفي</th>
+                        <th>رقم البطاقة الشخصية</th>
+                        <th>مكان الاصدار</th>
+                        <th>تاريخ الاصدار</th>
+                        <th>رقم بطاقة الميلاد</th>
+                        <th>مكان الاصدار</th>
+                        <th style="
+    text-align: center;
+    style=" width:="">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr>
+                        <td>تسلسل</td>
+
+                        <td> الاسم الثلاثي</td>
+                        <td> اللقب</td>
+                        <td> اسم الام </td>
+                        <td> البريد الالبكتروني</td>
+                        <td>العمر</td>
+                        <td> الرقم الوظيفي</td>
+                        <td>رقم البطاقة الشخصية</td>
+                        <td>مكان الاصدار</td>
+                        <td>تاريخ الاصدار</td>
+                        <td>رقم بطاقة الميلاد</td>
+                        <td>مكان الاصدار</td>
+
+
+
+
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="
+    text-align: center;
+">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</section>
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModal3">
+    <div class="modal-dialog modal-lg" style=" max-width: 1290px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">البيانات الشخصية</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">الرقم الوطني</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">رقم الموظف</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 col-12">
+                                                    <label for="first-name-icon">الاسم الثلاثي</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">اللقب</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" id="first-name-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon">الرقم التاميني</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 col-12">
+                                                    <label for="first-name-icon">اسم الام</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" id="first-name-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">العنون</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control"  id="first-name-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">رقم التلفون</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" id="first-name-icon">
+                                                            <div class="form-control-icon">
+                                                                <i class="fa fa-phone"></i>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6 col-12" style=" border: 1px solid;">
+                                                    <label for="first-name-icon"> وثيقة اثبات الشخصية</label>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" placeholder="" id="first-name-icon">
+                                                            <div class="form-control-icon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" placeholder="" id="first-name-icon">
+                                                            <div class="form-control-icon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12" style=" border: 1px solid;">
+                                                    <label for="first-name-icon">وثيقة عيد الميلاد</label>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" placeholder="" id="first-name-icon">
+                                                            <div class="form-control-icon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control" placeholder="" id="first-name-icon">
+                                                            <div class="form-control-icon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group has-icon-left">
+                                                            <label for="first-name-icon">الجنس</label>
+                                                            <div class="position-relative">
+                                                                <fieldset class="form-group">
+                                                                    <select class="form-select" id="basicSelect">
+                                                                        <option>ذكر</option>
+                                                                        <option>انثئ</option>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group has-icon-left">
+
+                                                            <div class="position-relative">
+                                                                <input type="file" class="form-control" placeholder="إضافة صورة" id="first-name-icon">
+                                                                <div class="form-control-icon">
+                                                                    <i class="fa fa-user"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label for="country-floating"></label>
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>IT</option>
+                                                                    <option>ENGINEERING</option>
+                                                                    <option>HR</option>
+                                                                    <option>FINANCE</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label for="company-column"></label>
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>IT</option>
+                                                                    <option>MANAGER</option>
+                                                                    <option>SUPERVISOR</option>
+                                                                    <option>ENGINEER</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group has-icon-left">
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 d-flex justify-content-end">
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-light" id="btnclose">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+    $(document).ready(function () {
+
+        $("#Employeeli").click(function () {
+
+            $("#myModal3").modal('show');
+        });
+        $("#btnclose").click(function () {
+
+            $("#myModal3").modal('hide');
+        });
+    });
+    </script>
+}

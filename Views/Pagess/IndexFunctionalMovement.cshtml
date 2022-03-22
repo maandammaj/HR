@@ -1,0 +1,507 @@
+﻿
+@{
+    ViewData["Title"] = "IndexFunctionalMovement";
+}
+
+
+<h1 style="margin-right:10px">إجراءات وظيفية</h1>
+<div style="text-align:center">
+<div class="col-md-3 col-12" style="margin-right:10px">
+    <label for="first-name-icon">اسم الموظف</label>
+    <div class="form-group ">
+
+        <input type="text" class="form-control">
+    </div>
+</div>
+
+@*///////////////////////////////////////////////// حركة وظيفية  /////////////////////////////////////////////////*@
+<div class="col-12">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <br />
+                <br />
+              
+              
+                <form class="form">
+                    <div class="row">
+
+                        <div class="col-md-3 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon">الموقع القضائي الأساسي</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>الدبوان العام</option>
+                                            <option>المحكمة العليا</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon">الموقع القضائي الفرعي</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>مكتب الوزير </option>
+                                            <option>مركز المعلومات</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="first-name-icon"> تاريخ النقل</label>
+                            <div class="form-group has-icon-left">
+
+                                <input type="date" class="form-control" id="first-name-icon">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12">
+
+                        </div>
+                        <div class="col-md-1 col-12">
+                            <label for="first-name-icon" ></label>
+                            <div class="form-group ">
+
+                                <input type="submit" class="form-control" value="نقل">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <br />
+   
+          
+                <form class="form">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <label for="first-name-icon">الوظيفة</label>
+                            <div class="form-group ">
+
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="first-name-icon"> تاريخ تغيير الوظيفة</label>
+                            <div class="form-group has-icon-left">
+
+                                <input type="date" class="form-control" id="first-name-icon">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+
+                        </div>
+                        <div class="col-md-1 col-12">
+                            <label for="first-name-icon"></label>
+                            <div class="form-group ">
+
+                                <input type="submit" class="form-control" value="تغيير">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <br />
+                <br />
+         
+          
+                <form class="form">
+                    <div class="row">
+                        <div class="col-md-2 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> المجموعة الوظيفة</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>الثانية</option>
+                                            <option>الثالثة</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> الفئة الوظيفة</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>3</option>
+                                            <option>6</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> المرتبة الوظيفة</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>1+ع</option>
+                                            <option>1+ب</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="first-name-icon"> تاريخ تغيير الدرجة</label>
+                            <div class="form-group has-icon-left">
+
+                                <input type="date" class="form-control" id="first-name-icon">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12">
+
+                        </div>
+                        <div class="col-md-1 col-12">
+                            <label for="first-name-icon"></label>
+                            <div class="form-group ">
+
+                                <input type="submit" class="form-control" value="تغيير">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <br />
+            
+           
+                <form class="form">
+                    <div class="row">
+                        <div class="col-md-2 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon">حالة الموظف</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>ملتزم</option>
+                                            <option>متلاعب</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> استحقاق الحالة</label>
+                                <div class="position-relative">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>3</option>
+                                            <option>6</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="first-name-icon"> تاريخ تغيير الحالة</label>
+                            <div class="form-group has-icon-left">
+
+                                <input type="date" class="form-control" id="first-name-icon">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+
+                        </div>
+                        <div class="col-md-1 col-12">
+                            <label for="first-name-icon"></label>
+                            <div class="form-group ">
+
+                                <input type="submit" class="form-control" value="تغيير">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*/////////////////////////////////////////////////Modal حركة وظيفية  /////////////////////////////////////////////////*@
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModalFunctionalMovement" style="text-align:center">
+    <div class="modal-dialog modal-lg" style=" max-width: 1290px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">حركة وظيفية</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon">اسم الموظف</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">الموقع القضائي الأساسي</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>الدبوان العام</option>
+                                                                    <option>المحكمة العليا</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">الموقع القضائي الفرعي</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>مكتب الوزير </option>
+                                                                    <option>مركز المعلومات</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-12">
+                                                    <label for="first-name-icon"> تاريخ النقل</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-12">
+
+                                                    <div class="form-group ">
+
+                                                        <input type="submit" class="form-control" value="نقل">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-4 col-12">
+                                                    <label for="first-name-icon">الوظيفة</label>
+                                                    <div class="form-group ">
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon"> تاريخ تغيير الوظيفة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-12">
+
+                                                    <div class="form-group ">
+
+                                                        <input type="submit" class="form-control" value="تغيير">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon"> المجموعة الوظيفة</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>الثانية</option>
+                                                                    <option>الثالثة</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon"> الفئة الوظيفة</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>3</option>
+                                                                    <option>6</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon"> المرتبة الوظيفة</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>1+ع</option>
+                                                                    <option>1+ب</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon"> تاريخ تغيير الدرجة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-12">
+
+                                                    <div class="form-group ">
+
+                                                        <input type="submit" class="form-control" value="تغيير">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon">حالة الموظف</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>ملتزم</option>
+                                                                    <option>متلاعب</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group has-icon-left">
+                                                        <label for="first-name-icon"> استحقاق الحالة</label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>3</option>
+                                                                    <option>6</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <label for="first-name-icon"> تاريخ تغيير الحالة</label>
+                                                    <div class="form-group has-icon-left">
+
+                                                        <input type="date" class="form-control" id="first-name-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-12">
+
+                                                    <div class="form-group ">
+
+                                                        <input type="submit" class="form-control" value="تغيير">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                @* <button type="button" class="btn btn-success">Submit</button>*@
+                <button type="button" class="btn btn-light" id="btnclose">اغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*/////////////////////////////////////////////////Modal حركة وظيفية  /////////////////////////////////////////////////*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+
+            $("#IDFunctionalMovement").click(function () {
+
+                $("#myModalFunctionalMovement").modal('show');
+            });
+            $("#btnclose").click(function () {
+
+                $("#myModalFunctionalMovement").modal('hide');
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="row ">
+        <div class="col-3 container CenteredContainer text-center">
+            <form asp-action="Register">
+                <h4 class="text-white">إضافة مستخدم</h4>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+
+                    <input  class="form-control" placeholder="اسم المستخدم" />
+
+                </div>
+                <div class="form-group">
+
+                    <input  class="form-control" placeholder="البريد الالكتروني" />
+                  >
+                </div>
+                <div class="form-group">
+
+                    <input  class="form-control" placeholder="" />
+
+                </div>
+                <div class="form-group">
+
+                    <input class="form-control" placeholder="تاكيد كلمة المرور" />
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="تسجيل" class="btn btn-danger  font-weight-bolder" style=" background-color: aquamarine;color:white;   border: 1px solid aqua;" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+
+
+
+

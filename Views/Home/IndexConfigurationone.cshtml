@@ -1,0 +1,737 @@
+﻿
+@{
+    ViewData["Title"] = "IndexConfigurationone";
+}
+
+<h1>تراميز وظيفية 1</h1>
+<div style="list-style:none;">
+    <div class="table-responsive  col-md-6 " style="margin-bottom: 66px;width: 100%;background: white;list-style: none;padding: 10px;text-align: center;">
+        <li class="nav-item menu-items sub-menu " style="        /* border: 1px solid red; */ width: 10%; margin-right: 10px; float: right;margin-left: 100px">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBTYPE" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="background: linear-gradient(to left,#878a9f,#00edff);width: 180px;border-radius: 10px;color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">نوع الوظيفة </span>
+
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 10%;/* margin-right: 10px; */float: right;margin-left: 80px;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIJOBLEVEL"href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="
+        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 180px;
+        border-radius: 10px;
+        color: white;
+        ">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">الدرجات الوظيفية </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 10%;/* margin-right: 10px; */float: right;margin-left: 80px;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBCATEGORY" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="
+        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 180px;
+        border-radius: 10px;
+        color: white;
+        ">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع الفئات الوظيفية </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 10%;/* margin-right: 10px; */float: right;margin-left: 80px;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBRANK" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="
+        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 180px;
+        border-radius: 10px;
+        color: white;
+        ">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع المرتبة الوظيفية </span>
+
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 10%;/* margin-right: 10px; */float: right;margin-left: 80px;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdPOSITIONS" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="
+        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 180px;
+        border-radius: 10px;
+        color: white;
+        ">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">المناصب </span>
+
+            </a>
+
+        </li>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 10%;/* margin-right: 22px; */float: right;margin-left: 3px;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdEMPLOYEECASES" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="
+        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 180px;
+        border-radius: 10px;
+        color: white;
+        ">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                    <span class="menu-title font-weight-normal">حالة الموظف </span>
+
+                </span>
+            </a>
+
+        </li>
+    </div>
+    @*//////////////////////////// نوع الوظيفة li  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBTYPE" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">نوع الوظيفة </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// نوع الوظيفة عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> اسم نوع الوظيفة</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>تسلسل</td>
+                            <th> اداري</th>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*/////////////////////////////////////////modyl نوع الوظيفة//////////////////////////////////*@
+    <div class="modal" id="myModalJOBTYPE">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">نوع الوظيفة</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم نوع الوظيفة" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*//////////////////////////// الدرجات الوظيفية li  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdIJOBLEVEL" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">الدرجات الوظيفية </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// الدرجات الوظيفية عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> اسم الدرجة </th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <th> مساعد موثق</th>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*/////////////////////////////////////////modyl الدرجات الوظيفية//////////////////////////////////*@
+    <div class="modal" id="myModalJOBLEVEL">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">الدرجات الوظيفية</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم الدرجة" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*////////////////////////////li الجدول الفئات الوظيفية///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBCATEGORY" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع الفئات الوظيفية </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+    </div>
+    @*////////////////////////////عرض الجدول الفئات الوظيفية///////////////////////////////////////////////*@
+
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> الفئات الوظيفية</th>
+                            <th> التفاصيل</th>
+                            <th> اسم الدرجة الوظيفية</th>
+
+
+                            <th style="  text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>الاولى</td>
+                            <td>1+أ</td>
+                            <td>وزير</td>
+
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+    @*////////////////////////////////////////////MODYLE الفئات الوظيفية///////////////////////////////////////////////////*@
+    <div class="modal" id="myModaJOBCATEGORY">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">   الفئات الوظيفيةات </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم الفئات الوظيفية" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار نوع المؤهل--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    @*////////////////////////////li الجدول المرتبة الوظيفية///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdJOBRANK" aria-expanded="true" aria-controls="sidlayout" style="        background: linear-gradient(to left,#878a9f,#00edff);
+        width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">أنواع المرتبة الوظيفية </span>
+                <i class="menu-arrow"></i>
+            </a>
+
+        </li>
+    </div>
+    @*////////////////////////////عرض الجدول المرتبة الوظيفية///////////////////////////////////////////////*@
+
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> المرتبة الوظيفية</th>
+                            <th> الراتب</th>
+                            <th> المنصب</th>
+                            <th> اسم الفئة الوظيفية</th>
+
+
+                            <th style="  text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>6</td>
+                            <td>9900000</td>
+                            <td>وزير</td>
+                            <td>الاولى</td>
+
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+    @*////////////////////////////////////////////MODYLE المرتبة الوظيفية///////////////////////////////////////////////////*@
+    <div class="modal" id="myModaJOBRANK">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Mangment baicsk -->
+                <div class="modal-header">
+                    <h4 class="modal-title">   المرتبة الوظيفيةات </h4>
+
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" اسم المرتبة الوظيفية" />
+                    </div>
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" الراتب" />
+                    </div>
+                    <div class="form-group">
+                        <input id="name" class="form-control" placeholder=" المنصب" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <select id="ddlcategory" class="form-control">
+                            <option value="0">-- اختار الفئة الوظيفية--</option>
+
+
+                        </select>
+                        <span class="text-danger"></span>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSave">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*//////////////////////////// المناصب li  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdPOSITIONS" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">المناصب </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// المناصب عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th>اسم المنصب</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <th>وزير</th>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*/////////////////////////////////////////modyl المناصب//////////////////////////////////*@
+    <div class="modal" id="myModalPOSITIONS">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">المناصب</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم المؤهل" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*//////////////////////////// حالة الموظف li  ///////////////////////////////////////////////*@
+    <div class="table-responsive  col-md-6 " style="margin-bottom:5px">
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 48px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="IdEMPLOYEECASES" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;
+        color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">حالة الموظف </span>
+
+            </a>
+
+        </li>
+    </div>
+
+    @*//////////////////////////// حالة الموظف عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th> حالة الموظف</th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <th> ملتزم</th>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    @*/////////////////////////////////////////modyl حالة الموظف//////////////////////////////////*@
+    <div class="modal" id="myModalEMPLOYEECASES">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header Sectors -->
+                <div class="modal-header">
+                    <h4 class="modal-title">حالة الموظف</h4>
+                    <button type="button" class="close btnclose">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input id="textsectors" class="form-control" type="text" placeholder="اسم حالة الموظف" />
+                    </div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSaveLOGIN">حفظ</button>
+                    <button type="button" class="btn btn-danger btnclose">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+        <script>
+            $(document).ready(function () {
+                $("#IdJOBTYPE").click(function () {
+
+                    $("#myModalJOBTYPE").modal('show');
+                });
+                $("#IdIJOBLEVEL").click(function () {
+
+                    $("#myModalJOBLEVEL").modal('show');
+                });
+                $("#IdJOBCATEGORY").click(function () {
+
+                    $("#myModaJOBCATEGORY").modal('show');
+                });
+                $("#IdJOBRANK").click(function () {
+
+                    $("#myModaJOBRANK").modal('show');
+                });
+                $("#IdPOSITIONS").click(function () {
+
+                    $("#myModalPOSITIONS").modal('show');
+                });
+
+                $("#IdEMPLOYEECASES").click(function () {
+
+                    $("#myModalEMPLOYEECASES").modal('show');
+                });
+
+                $(".btnclose").click(function () {
+                    $("#myModalJOBTYPE").modal('hide');
+                    $("#myModalJOBLEVEL").modal('hide');
+                    $("#myModaJOBCATEGORY").modal('hide');
+                    $("#myModaJOBRANK").modal('hide');
+                    $("#myModalPOSITIONS").modal('hide');
+                    $("#myModalEMPLOYEECASES").modal('hide');
+                });
+                $("#btnSave").click(function () {
+                    alert("nssssssss");
+                    var newcategory = $("#txtNewCategory").val();
+                    if (newcategory != "") {
+                        $.ajax({
+                            url: "/Home/AddCategory",
+                            method: "Post",
+                            data: { newcategory: newcategory },
+                            success: function (response) {
+                                var gitresp = $("#ddlcategoryy");
+                                var gitresp = $("#ddlcategory");
+                                gitresp.empty().append('<option selected="selected" value="0">--select category--</option>');
+                                $.each(response, function () {
+                                    gitresp.append($("<option></option>").val(this['value']).html(this['text']));
+                                });
+                                gitresp.append('<option value="new">--add new category--</option>');
+
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    }
+
+

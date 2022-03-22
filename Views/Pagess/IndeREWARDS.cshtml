@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewData["Title"] = "IndeREWARDS";
+}
+
+
+
+<h1 style="margin-right:10px">المكافئات</h1>
+<div style="text-align:center">
+    <div class=" col-12">
+        <div class="row">
+            <div class="col-md-3 col-12" style="margin-right:10px">
+                <label for="first-name-icon">اسم الموظف</label>
+                <div class="form-group ">
+
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-1 col-12" style="margin-right:10px">
+                <label for="first-name-icon"></label>
+                <div class="form-group ">
+
+                    <input type="submit" class="form-control" value="بحث">
+                </div>
+            </div>
+            <div class="col-md-3 col-12">
+
+            </div>
+            <div class="col-md-4 col-12" style="margin-right:10px">
+                <div class="col-md-12 col-12" style="margin-right:10px">
+
+                    <div class="form-group ">
+
+                        <input style=" background-color: rgb(176 243 240);" type="submit" class="form-control" value="طباعة كشوفات المكافئات">
+                    </div>
+                </div>
+                <div class="col-md-12 col-12" style="margin-right:10px">
+                    <label for="first-name-icon"></label>
+                    <div class="form-group ">
+
+                        <input style=" background-color: rgb(176 243 240);" type="submit" class="form-control" value="طباعة كشوفات الخلاصة">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+            @*///////////////////////////////////////////////// المكافأة  /////////////////////////////////////////////////*@
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <br />
+                            <br />
+
+
+                            <form class="form">
+                                <div class="row">
+
+                                    <div class="col-md-2 col-12">
+                                        <label for="first-name-icon">مبلغ المكافأة </label>
+                                        <div class="form-group ">
+
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <label for="first-name-icon"> تاريخ تسليم المكافأة</label>
+                                        <div class="form-group has-icon-left">
+
+                                            <input type="date" class="form-control" id="first-name-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-12">
+
+                                    </div>
+                                    <div class="col-md-1 col-12">
+                                        <label for="first-name-icon"></label>
+                                        <div class="form-group ">
+
+                                            <input type="submit" class="form-control" value="حفظ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @*//////////////////////////// المكافأت عرض الجدول ///////////////////////////////////////////////*@
+    <section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+        <div class="card" style="background-color:white">
+            <div class="card-body">
+
+
+
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>تسلسل</th>
+                            <th>مبلغ المكافأة</th>
+                            <th>اسم الموظف </th>
+                            <th> تاريخ تسليم المكافأة </th>
+
+
+                            <th style=" text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>200000</td>
+                            <td>اكرم عثمان</td>
+                            <td>2022-3-22</td>
+
+
+
+                            <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="text-align: center;">
+                                <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                                <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </section>
