@@ -1,31 +1,33 @@
-﻿@*@model ResumeManager.Models.ViewModels.User
+﻿@{
+    ViewData["Title"] = "Register";
+}
 
 
-<div class="row " >
+<div class="row ">
     <div class="col-3 container CenteredContainer text-center">
         <form asp-action="Register">
             <h4 class="text-white">إضافة مستخدم</h4>
             <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="text-danger"></div>
             <div class="form-group">
 
-                <input asp-for="UserName" class="form-control" placeholder="اسم المستخدم" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <input class="form-control" placeholder="اسم المستخدم" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
 
-                <input asp-for="UserEmail" class="form-control" placeholder="البريد الالكتروني" />
-                <span asp-validation-for="UserEmail" class="text-danger"></span>
+                <input class="form-control" placeholder="البريد الالكتروني" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
 
-                <input asp-for="UserPassword" class="form-control" placeholder="كلمة المرور" />
-                <span asp-validation-for="UserPassword" class="text-danger"></span>
+                <input class="form-control" placeholder="كلمة المرور" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
 
-                <input asp-for="UserPassword" class="form-control" placeholder="تاكيد كلمة المرور" />
-                <span asp-validation-for="UserPassword" class="text-danger"></span>
+                <input class="form-control" placeholder="تاكيد كلمة المرور" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="تسجيل" class="btn btn-danger  font-weight-bolder" style=" background-color: aquamarine;color:white;   border: 1px solid aqua;" />
@@ -34,7 +36,9 @@
     </div>
 </div>
 
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+
+    <script>
+    </script>
+}

@@ -13,8 +13,17 @@ namespace HR.Controllers
         public ActionResult IndexFunctionalMovement()
         {
             return View();
-        }   
+        }    
+ 
         public ActionResult IndexCOURSES()
+        {
+            return View();
+        }       
+        public ActionResult IndexFUNCTIONALDATA()
+        {
+            return View();
+        } 
+        public ActionResult IndexFUNANCIALSTATEMENTS()
         {
             return View();
         }

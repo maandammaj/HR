@@ -22,7 +22,14 @@ namespace HR.Controllers
         {
             return View();
         }
-
+        public ActionResult Login()
+        {
+            return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
