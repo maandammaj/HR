@@ -35,6 +35,39 @@
                                 <span>لوحة المراجعة</span>
                             </a>
                         </li>
+<li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="fa fa-users text-success"></i>
+                                <span>صفحات الموظف  </span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a asp-controller="Home" asp-action="AdminAddemployee">البيانات الشخصية الموظف </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Pagess" asp-action="IndexCOURSES"> الدورات التعليمية  </a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="Pagess" asp-action="IndeREWARDS">المكافأة   </a>
+
+                                </li>
+                                <li>
+
+                                    <a asp-controller="Pagess" asp-action="IndexFunctionalMovement"> إجراءات وظيفية </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="EMP_HAS_DECISIONS">القرارات الوظيفة</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Login"> تسجيل الدخول  </a>
+                                </li>
+
+<li>
+                                    <a asp-controller="Home" asp-action="Login"> أضافه  مستخدم  </a>
+                                </li>
+</ul>
+</li>
                         <li class="sidebar-item  has-sub">
                             <a class='sidebar-link'>
                                 <i class="fa fa-building text-success"></i>
@@ -193,36 +226,9 @@
 
                             </ul>
                         </li>
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="fa fa-users text-success"></i>
-                                <span>المستخدمين  </span>
-                            </a>
-                            <ul class="submenu ">
-                                <li>
-                                    <a asp-controller="Home" asp-action="AdminAddemployee">البيانات الشخصية الموظف </a>
-                                </li>
-                                <li>
-                                    <a asp-controller="Pagess" asp-action="IndexCOURSES">إضافة مستخدم </a>
-
-                                </li>
-                                <li>
-                                    <a asp-controller="Pagess" asp-action="IndeREWARDS">إضافة مستخدم </a>
-
-                                </li>
-                                <li>
-
-                                    <a asp-controller="Pagess" asp-action="IndexFunctionalMovement">إضافة مستخدم </a>
-                                </li>
-                                <li>
-                                    <a asp-controller="Employee" asp-action="manage">إضافةالواجهات</a>
-                                </li>
-                                <li>
-                                    <a asp-controller="Employee" asp-action="manage">تحديد الصلاحيات</a>
-                                </li>
-
-                            </ul>
-                        </li>
+                        
+                            
+                       
 
 
                         <li class="sidebar-item  has-sub">
