@@ -21,6 +21,10 @@ namespace HR.Controllers
         public IActionResult Index()
         {
             return View();
+        }  
+        public IActionResult EMP_HAS_DECISIONS()
+        {
+            return View();
         }
         public ActionResult Login()
         {

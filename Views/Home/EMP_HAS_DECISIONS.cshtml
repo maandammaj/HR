@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "DECISIONS_FOR_EMPLOYEE";
+}
+<div class="table-responsive  col-md-6 " style="margin-bottom:5px;list-style:none;">
+    <ul>
+        <li class="nav-item menu-items sub-menu " style="/* border: 1px solid red; */width: 30%;margin-right: 8px;float: right;">
+            <a class="nav-link" data-bs-toggle="collapse" id="EmployeeDecision" href="#MAAN1" aria-expanded="true" aria-controls="sidlayout" style="  background: linear-gradient(to left,#878a9f,#00edff);  width: 300px;
+        border-radius: 10px;color: white;">
+                <span class="menu-icon">
+                    <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title font-weight-normal">اضافة القرارات</span>
+
+            </a>
+        </li>
+    </ul>
+</div>
+<br />
+<br />
+<br />
+
+<div class="col-md-3"><input type="search" style="margin-right: 8px;" placeholder="ابحث عن اسم الموظف" class="form-control  " /></div>
+@*/////////////////////////////////////////////////////////////////////////////*@
+<section class="section  " style="background-color:white;margin: 10px;border-radius: 10px;">
+    <div class="Row" style="background-color:white">
+
+
+        <div class="table-responsive col-md-12">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>تسلسل</th>
+                        <th> اسم الموظف </th>
+                        <th> رقم القرار</th>
+                        <th>نوع القرار</th>
+                        <th> طبيعة القرار</th>
+                        <th> مصدر القرار</th>
+                        <th> موضوع القرر</th>
+                        <th>التاريخ</th>
+                        <th style=" text-align: center;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td> معاذ عبدالرحمن حمود</td>
+                        <td> 115</td>
+                        <td> وزاري </td>
+                        <td> تعيين</td>
+                        <td> الوزير</td>
+                        <td>توظيفة بالديوان العام</td>
+                        <td>2000-2-28</td>
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style=text-align: center;">
+                            <button id="btnadd" type="button" class="btn btn-sm btn-secondary visible" onclick="AddItem(this)">Edite</button>
+                            <button id="btnremove" type="button" class="btn btn-sm btn-danger visible">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Dummy Modal Starts -->
+<div class="modal demo-modal" id="myModal3">
+    <div class="modal-dialog modal-lg" style="max-width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">القرار</h5>
+                <button type="button" class="close" id="btnclose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card" style="box-shadow:none;">
+                                <div class="card-content">
+                                    <div class="card-body" style="padding:0px;">
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-md-5 col-12">
+                                                    <label>اسم الموظف</label>
+                                                    <div class="form-group ">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 ">
+                                                    <div class="form-group ">
+                                                        <label>نوع القرار </label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>وزاري</option>
+                                                                    <option>اداري </option>
+                                                                    <option>رئاسي </option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 ">
+                                                    <div class="form-group ">
+                                                        <label>طبيعة القرار </label>
+                                                        <div class="position-relative">
+                                                            <fieldset class="form-group">
+                                                                <select class="form-select" id="basicSelect">
+                                                                    <option>تعيين</option>
+                                                                    <option>نقل </option>
+                                                                    <option>تكليف </option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <label>مصدر قرار التعيين</label>
+                                                    <div class="form-group ">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3  col-12">
+                                                    <label>رقم القرار</label>
+                                                    <div class="form-group ">
+                                                        <div class="position-relative">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label>تاريخ القرار</label>
+                                                    <div class="form-group">
+                                                        <div class="position-relative">
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-12">
+                                                    <label>موضوع القرار</label>
+                                                    <div class="form-group ">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-12">
+                                                    <input type="checkbox" />  <label>القرار الحالي الذي تعتمد علية البيانات الشخصية</label>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-start">
+                            <button type="submit" class="btn btn-primary me-1 mb-1">حفظ</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+
+            $("#EmployeeDecision").click(function () {
+
+                $("#myModal3").modal('show');
+            });
+            $("#btnclose").click(function () {
+
+                $("#myModal3").modal('hide');
+            });
+        });
+    </script>
+}
